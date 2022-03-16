@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sthabile Gardens</title>
+    <script src="https://kit.fontawesome.com/73af3111f2.js" crossorigin="anonymous"></script>
+    <style>
+
+        body {
+            background: rgb(215, 218, 210);
+            margin: 0;
+            text-align: center;
+            display: grid;
+            grid-template-rows: 60px 160px 380px 450px 200px 70px;
+            row-gap: 30px;
+        }
+
+        #header {
+            display: grid;
+            grid-template-columns: 60px 2fr 1fr;
+            grid-template-rows: 60px;
+            margin-top: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+            gap: 5px;
+            position: sticky;
+            top: 0;
+            background: rgb(215, 218, 210);
+            border: 1px solid rgb(136, 136, 136);
+            border-top: transparent;
+            border-left: transparent;
+            border-right: transparent;
+        }
+
+        #header > div, #header > #nav-bar {
+            background: transparent;
+            color: rgb(17, 17, 17);
+            align-content: center;
+            
+
+            
+        }
+
+        #header > div > #header-img {
+            margin-top: 3px;
+            width: 50px;
+            height: 50px;
+        }
+
+        #header > div > h1 {
+            font-size: 45px;
+            font-family: Arial, Helvetica, sans-serif;
+            color:rgb(17, 17, 17);
+            padding-left: 0;
+            margin-top: 3px;
+            text-align: left;
+            
+            
+        }
+
+        #header #nav-bar {
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        #header > #nav-bar > a {
+        
+            text-decoration: none;
+            color: rgb(17, 17, 17);
+            font-size: 20px;
+            font-weight: 500;
+            padding-right: 30px;
+            
+        }
+
+        .subscribe {
+            background:transparent;
+            
+        }
+
+        input {
+            margin-bottom: 15px;
+            width: 300px;
+            padding: 10px;
+            border: none
+        }
+
+        #email:hover {
+            outline: none;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .submit {
+            background: rgb(17, 17, 17);
+            padding: 10px;
+            font-size: 15px;
+            border: none;
+            color: white;
+            width: 100px;
+        }
+
+        .features {
+            background: transparent;
+            display: grid;
+            grid-template-rows: 120px 120px 120px;
+            gap: 5px;
+            grid-template-columns: 120px 3fr;
+            margin-left: 15%;
+            margin-right: 15%;
+            width: 70%;
+        
+        }
+
+        .image1, .image2, .image3 {
+            background: transparent;
+            align-content: center;
+            padding-top: 30px;
+            
+        }
+
+        .description1, .description2, .description3 {
+            background: transparent;
+            padding: 0 30px;
+            text-align: justify;
+        }
+
+        .image1 i, .image2 i, .image3 i {
+            color: rgb(17, 17, 17);
+            font-size: 50px;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-weight: 600;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            padding-top: 0;
+            margin-top: 10px;
+        }
+
+       iframe {
+           outline: none;
+       }
+
+       .pricing {
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr;
+           gap: 0 40px;
+           grid-template-rows: 50px 3fr;
+           width: 70%;
+           margin-left: 15%;
+           margin-right: 15%;
+       }
+
+        .heading {
+           background: rgb(17, 17, 17);
+           padding: 10px;
+           text-align: center;
+       }
+
+       .heading p {
+           color: rgb(255, 255, 255);
+           font-size: 22px;
+           font-weight: 600;
+           letter-spacing: 2px;
+           margin-top: 0;
+           padding-top: 0;
+       }
+
+        .price{
+           background:rgb(255, 255, 255);
+           text-align: center;
+       }
+
+       .price p {
+           color: rgb(17, 17, 17);
+           font-size: 18px;
+           font-weight: 600;
+           margin-bottom: 30px;
+           margin-top: 20px;
+       }
+
+       .price button {
+           border: none;
+           background-color: rgb(17, 17, 17);
+           color: white;
+           outline: none;
+           padding: 10px;
+       }
+
+       .price button:hover {
+           background-color: rgb(215, 218, 210);
+           color: rgb(0, 0, 0);
+       }
+
+       footer {
+           display: grid;
+           width: 70%;
+           margin-right: 15%;
+           margin-left: 15%;
+           grid-template-rows: 1fr 1fr;
+           border: 1px solid rgb(136, 136, 136);
+           border-right: transparent;
+           border-left: transparent;
+           border-bottom: transparent;
+           
+       }
+
+       .legal, .copyright {
+           display: flex;
+           justify-content: flex-end;
+           padding: 5px;
+       }
+
+       .legal a {
+           text-decoration: none;
+           color:rgb(17, 17, 17);
+           font-weight: 600;
+           
+           font-size: 18px;
+       }
+
+       .mar15 {
+        margin-right: 28px
+       }
+
+       .copyright p {
+        font-size: 16px;
+            font-weight: 500;
+            padding-top: 0;
+            margin-top: 0;
+            margin-right: 0;
+       }
+
+
+       @media screen and (max-width: 1107px) {
+       #header {
+               grid-template-columns: 60px 1.5fr 1.5fr;
+               grid-template-rows: 60px ;
+           }
+       }
+
+       @media screen and (max-width:900px) {
+           #header {
+            grid-template-columns: 60px 2fr 1fr;
+               grid-template-rows: 60px ;
+           }
+
+           #header > #nav-bar > a {
+               font-size: 18px;
+               padding-right: 10px;
+           }
+        }
+
+        @media screen and (max-width:860px) {
+           #header {
+            grid-template-columns: 60px 2fr 1fr;
+               grid-template-rows: 60px ;
+           }
+
+           #header > div > h1 {
+            font-size: 40px;
+           }
+
+           #header > #nav-bar > a {
+               font-size: 16px;
+               padding-right: 7px;
+           }
+        }
+
+        @media screen and (max-width:760px) {
+           #header {
+            grid-template-columns: 60px 1.7fr 1.3fr;
+               grid-template-rows: 60px ;
+           }
+
+           #header > div > h1 {
+            font-size: 40px;
+           }
+
+           #header > #nav-bar > a {
+               font-size: 16px;
+               padding-right: 7px;
+           }
+
+           .features {
+               width: 90%;
+               margin-right: 5%;
+               margin-left: 5%;
+           }
+
+           .pricing {
+               width: 80%;
+               margin-left: 10%;
+               margin-right: 10%;
+           }
+
+           footer {
+            width: 80%;
+               margin-left: 10%;
+               margin-right: 10%; 
+           }
+        }
+
+        @media screen and (max-width:690px) {
+           #header {
+            grid-template-columns: 40px 2fr 1fr;
+               grid-template-rows: 40px ;
+               padding-right: 0;
+           }
+
+           #header > div > #header-img {
+               width: 40px;
+               height: 40px;
+           }
+
+           #header > div > h1 {
+            font-size: 35px;
+            margin-top: 10px;
+           }
+
+           #header > #nav-bar > a {
+               font-size: 14px;
+               padding-right: 5px;
+           }
+
+           .features {
+               width: 100%;
+               margin-right: 0;
+               margin-left: 0;
+           }
+
+           .pricing {
+               width: 100%;
+               margin-left: 0;
+               margin-right: 0;
+           }
+
+           footer {
+            width: 100%;
+               margin-left: 0;
+               margin-right: 0; 
+           }
+        }
+
+
+
+        
+        </style>
+</head>
+<body>
+    <header id="header">
+        <div>
+            <img id="header-img" src="https://image.flaticon.com/icons/png/128/620/620798.png">
+        </div>
+        <div>
+            <h1>Sthabile Gardens</h1>
+        </div> 
+        <nav id="nav-bar">
+            <a href="#features">Features</a>
+
+            <a href="#howitworks">How it works</a>
+
+            <a href="#pricing">Pricing</a>
+        </nav>
+    </header>
+
+    <div class="subscribe">
+        <h2>Fresh veggies straight from the yard</h2>
+        <form action="https://www.freecodecamp.com/email-submit" method="POST">
+            <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email"><br>
+            <input type="submit" id="submit" class="submit" value="Subscribe">
+        </form>
+    </div>
+
+    <div class="features" id="features">
+        
+            <div class="image1">
+                <i class="fas fa-gem"></i>
+            </div>
+            <div class="description1">
+                <h3>Premium Veggies</h3>
+                <p>Our crops are farmed locally by dedicated individuals to ensure the best is harvested.</p>
+            </div>
+    
+        
+            <div class="image2">
+                <i class="fas fa-shipping-fast"></i>
+            </div>
+            <div class="description2">
+                <h3>Fast Delivery/Collection</h3>
+                <p>Our customers are notified a few weeks before harvest so they can make their orders. Delivery and collection is on time. We also provide free returns if you are not satisfied.</p>
+            </div>
+
+        
+            <div class="image3">
+                <i class="fas fa-certificate"></i>
+            </div>
+            <div class="description3">
+                <h3>Quality Assurance</h3>
+                <p>For every purchase you make, we will ensure there are of great quality in appearance and taste.</p>
+            </div>
+        
+    </div>
+
+    <div class="howitworks" id="howitworks">
+        <iframe width="600" height="400"
+            src="https://www.youtube.com/embed/jH0UJpEJW74">
+        </iframe>
+    </div>
+
+    <div class="pricing" id="pricing">
+
+        <div class="heading">
+            <p>CABBAGES</p>
+        </div>
+
+        <div class="heading">
+            <p>ONIONS</p>
+        </div>
+
+        <div class="heading">
+            <p>TOMATOES</p>
+        </div>
+
+        <div class="price">
+            <p>R16/kg</p>
+            <button type="button">ADD TO CART</button>
+        </div>
+
+        <div class="price">
+            <p>R15/kg</p>
+            <button type="button">ADD TO CART</button>
+        </div>
+
+        <div class="price">
+            <p>R20/kg</p>
+            <button type="button">ADD TO CART</button>
+        </div>
+    </div>
+    <footer>
+        <div class="legal">
+            <a href="#" class="mar15">Privacy</a>
+            <a href="#" class="mar15">Terms</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="copyright">
+            <p>&COPY; Copyright 2021, Sthabile Gardens</p>
+        </div>
+    </footer>
+
+</body>
+</html>
